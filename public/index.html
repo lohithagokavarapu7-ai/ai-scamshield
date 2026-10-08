@@ -3,27 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AI ScamShield</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>🛡️ AI ScamShield</h1>
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
 
-    <p>Detect scams and understand why a message may be suspicious.</p>
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">🛡️</span>
+            <span>AI ScamShield</span>
+        </div>
 
-    <textarea
-        id="message"
-        placeholder="Paste a suspicious message here..."
-        rows="10"
-        cols="50">
-    </textarea>
+        <div class="status">
+            <span class="status-dot"></span>
+            AI Protection
+        </div>
+    </header>
 
-    <br><br>
 
-    <button id="scanButton">🔍 Scan Message</button>
+    <main class="container">
 
-    <div id="result"></div>
+        <section class="hero">
+
+            <div class="badge">
+                🧠 AI-Powered Scam Detection
+            </div>
+
+            <h1>
+                Detect Scams.<br>
+                <span>Understand Why.</span>
+            </h1>
+
+            <p class="hero-text">
+                Analyze suspicious messages and discover whether they are
+                likely to be a scam, legitimate, or need verification.
+            </p>
+
+        </section>
+
+
+        <section class="scanner-card">
+
+            <div class="card-header">
+                <div>
+                    <h2>🔍 Scan a Message</h2>
+                    <p>Paste the suspicious SMS, email, or message below.</p>
+                </div>
+
+                <div class="secure-label">
+                    🔒 Secure Analysis
+                </div>
+            </div>
+
+
+            <textarea
+                id="message"
+                placeholder="Example: Congratulations! You have won ₹50,000. Click the link below immediately to claim your reward..."
+            ></textarea>
+
+
+            <div class="input-footer">
+
+                <span id="characterCount">
+                    0 characters
+                </span>
+
+                <button id="clearButton" class="clear-button">
+                    Clear
+                </button>
+
+            </div>
+
+
+            <button id="scanButton" class="scan-button">
+                <span>🔍</span>
+                Scan for Scam
+            </button>
+
+        </section>
+
+
+        <section id="loading" class="loading-card hidden">
+
+            <div class="loader"></div>
+
+            <div>
+                <h3>Analyzing message...</h3>
+                <p>
+                    ScamShield is checking the content for suspicious signals.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section id="result" class="result-card hidden">
+
+            <div class="result-top">
+
+                <div>
+                    <p class="result-label">
+                        ANALYSIS RESULT
+                    </p>
+
+                    <h2 id="verdict">
+                        —
+                    </h2>
+                </div>
+
+                <div class="risk-box">
+
+                    <span>Risk Score</span>
+
+                    <strong id="riskScore">
+                        0%
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="risk-bar-container">
+
+                <div
+                    id="riskBar"
+                    class="risk-bar">
+                </div>
+
+            </div>
+
+
+            <div class="result-section">
+
+                <h3>📌 Scam Category</h3>
+
+                <p id="category">
+                    —
+                </p>
+
+            </div>
+
+
+            <div class="result-section">
+
+                <h3>🔍 Why did ScamShield reach this conclusion?</h3>
+
+                <div id="reasons" class="reasons-list">
+                </div>
+
+            </div>
+
+
+            <div class="result-section">
+
+                <h3>🛡️ Safety Recommendation</h3>
+
+                <div id="recommendation" class="recommendation">
+                    —
+                </div>
+
+            </div>
+
+
+            <div class="disclaimer">
+
+                ⚠️ ScamShield provides an automated assessment and cannot
+                guarantee that a message is genuine or fraudulent.
+                Always independently verify important requests.
+
+            </div>
+
+        </section>
+
+
+        <section class="features">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🧠
+                </div>
+
+                <h3>AI Analysis</h3>
+
+                <p>
+                    Understands suspicious patterns in messages.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🔎
+                </div>
+
+                <h3>Explainable Results</h3>
+
+                <p>
+                    Shows the actual reasons behind the risk score.
+                </p>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    🛡️
+                </div>
+
+                <h3>Safety First</h3>
+
+                <p>
+                    Provides practical guidance before you take action.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 AI ScamShield · Built for safer digital communication
+        </p>
+
+    </footer>
+
 
     <script src="app.js"></script>
 
